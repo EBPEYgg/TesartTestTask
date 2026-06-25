@@ -31,9 +31,4 @@ public class Measurement
     /// Текст ошибки при неуспешном измерении.
     /// </summary>
     public string? ErrorMessage { get; set; }
-
-    /// <summary>
-    /// Устройство.
-    /// </summary>
-    public required Device Device { get; set; }
 }
