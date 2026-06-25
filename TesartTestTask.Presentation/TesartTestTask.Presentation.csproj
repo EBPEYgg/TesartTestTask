@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -14,6 +14,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesartTestTask.Application\TesartTestTask.Application.csproj" />
+    <ProjectReference Include="..\TesartTestTask.Domain\TesartTestTask.Domain.csproj" />
+    <ProjectReference Include="..\TesartTestTask.Infrastructure\TesartTestTask.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
