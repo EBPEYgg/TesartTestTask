@@ -4,12 +4,12 @@ namespace TesartTestTask.Domain.Enums;
 
 public enum DeviceStatus
 {
-    [Description("Активен")]
+    [Description("РђРєС‚РёРІРµРЅ")]
     Online,
 
-    [Description("Не активен")]
+    [Description("РќРµ Р°РєС‚РёРІРµРЅ")]
     Offline,
 
-    [Description("Ошибка")]
+    [Description("РћС€РёР±РєР°")]
     Error
 }

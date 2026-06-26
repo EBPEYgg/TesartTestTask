@@ -4,15 +4,15 @@ namespace TesartTestTask.Domain.Enums;
 
 public enum DeviceType
 {
-    [Description("Датчик температуры")]
+    [Description("Р”Р°С‚С‡РёРє С‚РµРјРїРµСЂР°С‚СѓСЂС‹")]
     TemperatureSensor,
 
-    [Description("Датчик давления")]
+    [Description("Р”Р°С‚С‡РёРє РґР°РІР»РµРЅРёСЏ")]
     PressureSensor,
 
-    [Description("Вольтметр")]
+    [Description("Р’РѕР»СЊС‚РјРµС‚СЂ")]
     VoltageMeter,
 
-    [Description("Амперметр")]
+    [Description("РђРјРїРµСЂРјРµС‚СЂ")]
     CurrentMeter
 }

@@ -5,42 +5,42 @@ namespace TesartTestTask.Domain.Entities;
 public class Device
 {
     /// <summary>
-    /// Уникальный идентификатор устройства.
+    /// РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓСЃС‚СЂРѕР№СЃС‚РІР°.
     /// </summary>
     public required Guid Id { get; set; }
 
     /// <summary>
-    /// Наименование устройства.
+    /// РќР°РёРјРµРЅРѕРІР°РЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР°.
     /// </summary>
     public required string Name { get; set; } = string.Empty;
 
     /// <summary>
-    /// Тип устройства.
+    /// РўРёРї СѓСЃС‚СЂРѕР№СЃС‚РІР°.
     /// </summary>
     public required DeviceType DeviceType { get; set; }
 
     /// <summary>
-    /// Текущий статус устройства.
+    /// РўРµРєСѓС‰РёР№ СЃС‚Р°С‚СѓСЃ СѓСЃС‚СЂРѕР№СЃС‚РІР°.
     /// </summary>
     public required DeviceStatus Status { get; set; } = DeviceStatus.Offline;
 
     /// <summary>
-    /// Последнее полученное значение.
+    /// РџРѕСЃР»РµРґРЅРµРµ РїРѕР»СѓС‡РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ.
     /// </summary>
     public double? LastValue { get; set; }
 
     /// <summary>
-    /// Время последнего обновления.
+    /// Р’СЂРµРјСЏ РїРѕСЃР»РµРґРЅРµРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ.
     /// </summary>
     public DateTime? LastUpdateTime { get; set; }
 
     /// <summary>
-    /// Интервал опроса устройства.
+    /// РРЅС‚РµСЂРІР°Р» РѕРїСЂРѕСЃР° СѓСЃС‚СЂРѕР№СЃС‚РІР°.
     /// </summary>
     public required int PollingIntervalMs { get; set; }
 
     /// <summary>
-    /// Список измерений.
+    /// РЎРїРёСЃРѕРє РёР·РјРµСЂРµРЅРёР№.
     /// </summary>
     public ICollection<Measurement> Measurements { get; set; } = [];
 }

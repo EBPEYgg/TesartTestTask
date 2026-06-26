@@ -4,15 +4,15 @@ namespace TesartTestTask.Domain.Enums;
 
 public enum PollingState
 {
-    [Description("Остановлен")]
+    [Description("РћСЃС‚Р°РЅРѕРІР»РµРЅ")]
     Stopped,
 
-    [Description("Запущен")]
+    [Description("Р—Р°РїСѓС‰РµРЅ")]
     Running,
 
-    [Description("Приостановлен")]
+    [Description("РџСЂРёРѕСЃС‚Р°РЅРѕРІР»РµРЅ")]
     Paused,
 
-    [Description("Останавливается")]
+    [Description("РћСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ")]
     Stopping
 }

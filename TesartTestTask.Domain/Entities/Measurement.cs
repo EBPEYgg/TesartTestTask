@@ -3,32 +3,32 @@ namespace TesartTestTask.Domain.Entities;
 public class Measurement
 {
     /// <summary>
-    /// Уникальный идентификатор измерения.
+    /// РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РёР·РјРµСЂРµРЅРёСЏ.
     /// </summary>
     public required Guid Id { get; set; }
 
     /// <summary>
-    /// Идентификатор устройства.
+    /// РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓСЃС‚СЂРѕР№СЃС‚РІР°.
     /// </summary>
     public required Guid DeviceId { get; set; }
 
     /// <summary>
-    /// Значение измерения.
+    /// Р—РЅР°С‡РµРЅРёРµ РёР·РјРµСЂРµРЅРёСЏ.
     /// </summary>
     public double? Value { get; set; }
 
     /// <summary>
-    /// Время измерения.
+    /// Р’СЂРµРјСЏ РёР·РјРµСЂРµРЅРёСЏ.
     /// </summary>
     public required DateTime Timestamp { get; set; }
 
     /// <summary>
-    /// Признак успешного измерения.
+    /// РџСЂРёР·РЅР°Рє СѓСЃРїРµС€РЅРѕРіРѕ РёР·РјРµСЂРµРЅРёСЏ.
     /// </summary>
     public required bool IsSuccess { get; set; }
 
     /// <summary>
-    /// Текст ошибки при неуспешном измерении.
+    /// РўРµРєСЃС‚ РѕС€РёР±РєРё РїСЂРё РЅРµСѓСЃРїРµС€РЅРѕРј РёР·РјРµСЂРµРЅРёРё.
     /// </summary>
     public string? ErrorMessage { get; set; }
 }
