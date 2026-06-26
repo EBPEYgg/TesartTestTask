@@ -30,8 +30,8 @@ public sealed class DatabaseInitializer : IApplicationDataInitializer
         {
             CreateDevice("Pt100", DeviceType.TemperatureSensor, 1_000),
             CreateDevice("Wika S-20", DeviceType.PressureSensor, 1_000),
-            CreateDevice("Œ¬≈Õ —¬01-220.»", DeviceType.VoltageMeter, 0_500),
-            CreateDevice("ÃÂ‡Ì‰ ¿Ã-2", DeviceType.CurrentMeter, 0_500),
+            CreateDevice("–û–í–ï–ù –°–í01-220.–ò", DeviceType.VoltageMeter, 0_500),
+            CreateDevice("–ú–µ–∞–Ω–¥—Ä –ê–ú-2", DeviceType.CurrentMeter, 0_500),
         };
 
         await _deviceRepository.AddRangeAsync(devices, cancellationToken);
