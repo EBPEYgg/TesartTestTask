@@ -1,9 +1,7 @@
-﻿<Application x:Class="TesartTestTask.Presentation.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:TesartTestTask.Presentation"
-             StartupUri="MainWindow.xaml">
+<prism:PrismApplication x:Class="TesartTestTask.Presentation.App"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:prism="http://prismlibrary.com/">
     <Application.Resources>
-         
     </Application.Resources>
-</Application>
+</prism:PrismApplication>

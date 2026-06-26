@@ -28,10 +28,10 @@ public sealed class DatabaseInitializer : IApplicationDataInitializer
 
         var devices = new[]
         {
-            CreateDevice("Датчик температуры", DeviceType.TemperatureSensor, 1_000),
-            CreateDevice("Датчик давления", DeviceType.PressureSensor, 1_000),
-            CreateDevice("Вольтметр", DeviceType.VoltageMeter, 0_500),
-            CreateDevice("Амперметр", DeviceType.CurrentMeter, 0_500),
+            CreateDevice("Pt100", DeviceType.TemperatureSensor, 1_000),
+            CreateDevice("Wika S-20", DeviceType.PressureSensor, 1_000),
+            CreateDevice("ОВЕН СВ01-220.И", DeviceType.VoltageMeter, 0_500),
+            CreateDevice("Меандр АМ-2", DeviceType.CurrentMeter, 0_500),
         };
 
         await _deviceRepository.AddRangeAsync(devices, cancellationToken);
