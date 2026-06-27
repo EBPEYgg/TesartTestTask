@@ -37,36 +37,4 @@ public sealed class DeviceRepository(SqliteTesartDbContextFactory dbContextFacto
         dbContext.Devices.AddRange(devices);
         await dbContext.SaveChangesAsync(cancellationToken);
     }
-
-    public async Task UpdateAsync(Device device, CancellationToken cancellationToken)
-    {
-        await using var dbContext = _dbContextFactory.CreateDbContext();
-        var existing = await dbContext.Devices
-            .FirstOrDefaultAsync(item => item.Id == device.Id, cancellationToken);
-
-        if (existing is null)
-        {
-            dbContext.Devices.Add(new()
-            {
-                Id = device.Id,
-                Name = device.Name,
-                DeviceType = device.DeviceType,
-                Status = device.Status,
-                LastValue = device.LastValue,
-                LastUpdateTime = device.LastUpdateTime,
-                PollingIntervalMs = device.PollingIntervalMs
-            });
-        }
-        else
-        {
-            existing.Name = device.Name;
-            existing.DeviceType = device.DeviceType;
-            existing.Status = device.Status;
-            existing.LastValue = device.LastValue;
-            existing.LastUpdateTime = device.LastUpdateTime;
-            existing.PollingIntervalMs = device.PollingIntervalMs;
-        }
-
-        await dbContext.SaveChangesAsync(cancellationToken);
-    }
 }

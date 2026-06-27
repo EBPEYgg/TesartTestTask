@@ -11,6 +11,4 @@ public interface IDeviceRepository
     Task<int> CountAsync(CancellationToken cancellationToken);
 
     Task AddRangeAsync(IEnumerable<Device> devices, CancellationToken cancellationToken);
-
-    Task UpdateAsync(Device device, CancellationToken cancellationToken);
 }

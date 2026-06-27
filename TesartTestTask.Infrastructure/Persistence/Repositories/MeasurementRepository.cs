@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TesartTestTask.Application.Repositories;
+using TesartTestTask.Application.Interfaces;
 using TesartTestTask.Domain.Entities;
 
 namespace TesartTestTask.Infrastructure.Persistence.Repositories;
@@ -7,21 +7,6 @@ namespace TesartTestTask.Infrastructure.Persistence.Repositories;
 public sealed class MeasurementRepository(SqliteTesartDbContextFactory dbContextFactory) : IMeasurementRepository
 {
     private readonly SqliteTesartDbContextFactory _dbContextFactory = dbContextFactory;
-
-    public async Task AddAsync(Measurement measurement, CancellationToken cancellationToken)
-    {
-        await using var dbContext = _dbContextFactory.CreateDbContext();
-        dbContext.Measurements.Add(new()
-            {
-                Id = measurement.Id,
-                DeviceId = measurement.DeviceId,
-                Value = measurement.Value,
-                Timestamp = measurement.Timestamp,
-                IsSuccess = measurement.IsSuccess,
-                ErrorMessage = measurement.ErrorMessage
-            });
-        await dbContext.SaveChangesAsync(cancellationToken);
-    }
 
     public async Task<IReadOnlyList<Measurement>> GetByDeviceIdAsync(Guid deviceId, 
                                                                      int? recordCount, 
@@ -43,5 +28,18 @@ public sealed class MeasurementRepository(SqliteTesartDbContextFactory dbContext
     {
         await using var dbContext = _dbContextFactory.CreateDbContext();
         await dbContext.Measurements.ExecuteDeleteAsync(cancellationToken);
+    }
+
+    public async Task SaveMeasurementAsync(Device device, Measurement measurement, CancellationToken cancellationToken)
+    {
+        await using var dbContext = _dbContextFactory.CreateDbContext();
+
+        dbContext.Attach(device);
+        dbContext.Entry(device).Property(d => d.Status).IsModified = true;
+        dbContext.Entry(device).Property(d => d.LastValue).IsModified = true;
+        dbContext.Entry(device).Property(d => d.LastUpdateTime).IsModified = true;
+
+        await dbContext.Measurements.AddAsync(measurement, cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 }
