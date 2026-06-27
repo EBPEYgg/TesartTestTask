@@ -100,9 +100,9 @@
                         <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="1.4*" />
                         <DataGridTextColumn Header="Тип" Binding="{Binding DeviceType, Converter={StaticResource EnumDescriptionConverter}}" Width="1.5*" />
                         <DataGridTextColumn Header="Статус" Binding="{Binding Status, Converter={StaticResource EnumDescriptionConverter}}" Width="0.9*" />
-                        <DataGridTextColumn Header="Значение" Binding="{Binding LastValueDisplay}" Width="0.9*" />
-                        <DataGridTextColumn Header="Дата" Binding="{Binding LastUpdateDisplay}" Width="1.4*" />
-                        <DataGridTextColumn Header="Интервал" Binding="{Binding PollingIntervalDisplay}" Width="0.9*" />
+                        <DataGridTextColumn Header="Значение" Binding="{Binding LastValue, StringFormat={}{0:F3}, TargetNullValue=-}" Width="0.9*" />
+                        <DataGridTextColumn Header="Дата" Binding="{Binding LastUpdateTime, StringFormat={}{0:dd-MM-yyyy HH:mm:ss}, TargetNullValue=-}" Width="1.4*" />
+                        <DataGridTextColumn Header="Интервал" Binding="{Binding PollingIntervalMs, StringFormat={}{0} ms}" Width="0.9*" />
                     </DataGrid.Columns>
                 </DataGrid>
             </GroupBox>
@@ -136,12 +136,12 @@
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="Статус" FontWeight="SemiBold" Margin="0 0 10 5" />
                         <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding SelectedDevice.Status, Converter={StaticResource EnumDescriptionConverter}}" Margin="0 0 15 5" />
                         <TextBlock Grid.Row="1" Grid.Column="2" Text="Последнее значение" FontWeight="SemiBold" Margin="0 0 10 5" />
-                        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding SelectedDevice.LastValueDisplay}" Margin="0 0 0 5" />
+                        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding SelectedDevice.LastValue, StringFormat={}{0:F3}, TargetNullValue=-}" Margin="0 0 0 5" />
 
                         <TextBlock Grid.Row="2" Grid.Column="0" Text="Дата" FontWeight="SemiBold" Margin="0 0 10 0" />
-                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SelectedDevice.LastUpdateDisplay}" />
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SelectedDevice.LastUpdateTime, StringFormat={}{0:dd-MM-yyyy HH:mm:ss}, TargetNullValue=-}" />
                         <TextBlock Grid.Row="2" Grid.Column="2" Text="Интервал опроса" FontWeight="SemiBold" Margin="0 0 10 0" />
-                        <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding SelectedDevice.PollingIntervalDisplay}" />
+                        <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding SelectedDevice.PollingIntervalMs, StringFormat={}{0} ms}" />
                     </Grid>
                 </GroupBox>
 
@@ -151,10 +151,10 @@
                               Margin="5"
                               VerticalScrollBarVisibility="Visible">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Дата" Binding="{Binding TimestampDisplay}" Width="1.4*" />
-                            <DataGridTextColumn Header="Значение" Binding="{Binding ValueDisplay}" Width="*" />
+                            <DataGridTextColumn Header="Дата" Binding="{Binding Timestamp, StringFormat={}{0:dd-MM-yyyy HH:mm:ss}}" Width="1.4*" />
+                            <DataGridTextColumn Header="Значение" Binding="{Binding Value, StringFormat={}{0:F3}, TargetNullValue=-}" Width="*" />
                             <DataGridCheckBoxColumn Header="Успешно" Binding="{Binding IsSuccess, Mode=OneWay}" Width="*" />
-                            <DataGridTextColumn Header="Ошибка" Binding="{Binding ErrorDisplay}" Width="1.8*" />
+                            <DataGridTextColumn Header="Ошибка" Binding="{Binding ErrorMessage, TargetNullValue=-}" Width="1.8*" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </GroupBox>
