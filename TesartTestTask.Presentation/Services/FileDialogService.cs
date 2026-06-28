@@ -7,12 +7,14 @@ public class FileDialogService : IFileDialogService
 {
     public string? ShowSaveCsvDialog(string defaultFileName)
     {
-        return new SaveFileDialog
+        var saveFileDialog = new SaveFileDialog
         {
             DefaultExt = ".csv",
             FileName = defaultFileName,
             Filter = "CSV files|*.csv",
             Title = "Ёкспорт истории измерений"
-        }.ShowDialog() == true ? defaultFileName : null;
+        };
+        
+        return saveFileDialog.ShowDialog() == true ? saveFileDialog.FileName : null;
     }
 }
