@@ -1,17 +1,28 @@
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
 namespace TesartTestTask.Infrastructure.Persistence;
 
-public sealed class SqliteTesartDbContextFactory(string connectionString)
+public sealed class SqliteTesartDbContextFactory
 {
-    private readonly string _connectionString = connectionString;
+    private readonly DbContextOptions<TesartDbContext> _options;
+
+    public SqliteTesartDbContextFactory(string connectionString)
+    {
+        _options = new DbContextOptionsBuilder<TesartDbContext>()
+            .UseSqlite(connectionString)
+            .Options;
+    }
+
+    public SqliteTesartDbContextFactory(SqliteConnection connection)
+    {
+        _options = new DbContextOptionsBuilder<TesartDbContext>()
+            .UseSqlite(connection)
+            .Options;
+    }
 
     public TesartDbContext CreateDbContext()
     {
-        var options = new DbContextOptionsBuilder<TesartDbContext>()
-            .UseSqlite(_connectionString)
-            .Options;
-
-        return new TesartDbContext(options);
+        return new TesartDbContext(_options);
     }
 }

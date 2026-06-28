@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesartTestTask.Presentation", "TesartTestTask.Presentation\TesartTestTask.Presentation.csproj", "{E160E16E-7DF9-4A14-A113-42C5610A99E9}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesartTestTask.Domain", "TesartTestTask.Domain\TesartTestTask.Domain.csproj", "{19534DBD-998F-4D9E-8C53-107BE77B7CA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesartTestTask.Infrastructure", "TesartTestTask.Infrastructure\TesartTestTask.Infrastructure.csproj", "{5B0F74F2-E6F8-43FD-A384-2B2C2DB23171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesartTestTask.Tests", "TesartTestTask.Tests\TesartTestTask.Tests.csproj", "{C290C125-5C52-4C2C-9450-A949A5D3375C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{5B0F74F2-E6F8-43FD-A384-2B2C2DB23171}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B0F74F2-E6F8-43FD-A384-2B2C2DB23171}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B0F74F2-E6F8-43FD-A384-2B2C2DB23171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C290C125-5C52-4C2C-9450-A949A5D3375C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C290C125-5C52-4C2C-9450-A949A5D3375C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C290C125-5C52-4C2C-9450-A949A5D3375C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C290C125-5C52-4C2C-9450-A949A5D3375C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89E3E9C4-1F49-4954-87DB-BE24EBF23BE7}
 	EndGlobalSection
 EndGlobal
