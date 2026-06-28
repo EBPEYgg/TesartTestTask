@@ -3,7 +3,6 @@ using Prism.Ioc;
 using System.IO;
 using System.Windows;
 using TesartTestTask.Application.Interfaces;
-using TesartTestTask.Application.Repositories;
 using TesartTestTask.Application.Services;
 using TesartTestTask.Infrastructure.Devices;
 using TesartTestTask.Infrastructure.Export;

@@ -6,7 +6,6 @@ using System.IO;
 using System.Windows.Data;
 using TesartTestTask.Application.DTO;
 using TesartTestTask.Application.Interfaces;
-using TesartTestTask.Application.Repositories;
 using TesartTestTask.Domain.Entities;
 using TesartTestTask.Domain.Enums;
 using TesartTestTask.Presentation.Interfaces;

@@ -1,5 +1,5 @@
 using TesartTestTask.Application.Interfaces;
-using TesartTestTask.Application.Repositories;
+using TesartTestTask.Application.Interfaces;
 using TesartTestTask.Domain.Entities;
 using TesartTestTask.Domain.Enums;
 

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TesartTestTask.Application.Repositories;
+using TesartTestTask.Application.Interfaces;
 using TesartTestTask.Domain.Entities;
 
 namespace TesartTestTask.Infrastructure.Persistence.Repositories;

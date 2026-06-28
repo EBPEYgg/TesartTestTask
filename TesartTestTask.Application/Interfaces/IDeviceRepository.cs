@@ -1,6 +1,6 @@
 using TesartTestTask.Domain.Entities;
 
-namespace TesartTestTask.Application.Repositories;
+namespace TesartTestTask.Application.Interfaces;
 
 public interface IDeviceRepository
 {

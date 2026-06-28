@@ -1,6 +1,5 @@
 using TesartTestTask.Application.DTO;
 using TesartTestTask.Application.Interfaces;
-using TesartTestTask.Application.Repositories;
 using TesartTestTask.Domain.Devices;
 using TesartTestTask.Domain.Entities;
 using TesartTestTask.Domain.Enums;
