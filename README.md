@@ -2,6 +2,11 @@
 
 Настольное приложение для мониторинга измерительных устройств, разработанное на платформе .NET 8 с использованием WPF и архитектуры MVVM.
 
+<img width="1186" height="693" alt="image" src="https://github.com/user-attachments/assets/76ed2d0a-13dd-417e-bfde-9d68fee4ad0e" />
+
+<img width="859" height="249" alt="image" src="https://github.com/user-attachments/assets/d290b524-0d12-4d2f-a0dc-3503ef8e0148" />
+
+
 ## Возможности
 
 - отображение списка измерительных устройств;
